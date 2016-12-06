@@ -1,0 +1,24 @@
+<p>
+  databinding works!
+  {{stringInterpolation}}
+  {{numberInterpolation}}
+</p>
+<h2>property binding</h2>
+<input type="text" name="name" [value]="stringInterpolation">
+<p [ngClass]="{redBorder: onTest()}">
+  it this styled?
+</p>
+
+<p [ngStyle]="{color: 'blue'}">
+  it this styled?
+</p>
+
+
+<h2>custom property binding</h2>
+<fa-property-binding [result]=numberInterpolation></fa-property-binding>
+
+<h2>Event Binding</h2>
+<fa-event-binding (clicked)="onClicked($event)"></fa-event-binding>
+
+<h2>Two way Binding</h2>
+<fa-two-way-binding></fa-two-way-binding>
